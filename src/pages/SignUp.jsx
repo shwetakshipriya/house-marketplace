@@ -4,7 +4,8 @@ import {Link , useNavigate} from 'react-router-dom'
 import{toast} from 'react-toastify';
 import {setDoc,doc, serverTimestamp} from 'firebase/firestore'
 import {getAuth,createUserWithEmailAndPassword,updateProfile} from 'firebase/auth'
-import {db} from '../firebase.config'
+import {db} from '../firebase.config';
+import OAuth from '../components/OAuth';
 import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 function SignUp() {
@@ -82,6 +83,7 @@ function SignUp() {
                         </button>
                     </div>
                 </form>
+                <OAuth />
                 <Link to='/sign-up' className='registerLink'>Sign Up Instead</Link>
             </div>
            
